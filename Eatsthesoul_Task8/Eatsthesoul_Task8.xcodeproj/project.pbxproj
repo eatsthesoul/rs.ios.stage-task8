@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F1A011E26A1C07000253599 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A011D26A1C07000253599 /* AppDelegate.m */; };
-		4F1A012126A1C07000253599 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A012026A1C07000253599 /* SceneDelegate.m */; };
-		4F1A012426A1C07100253599 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A012326A1C07100253599 /* ViewController.m */; };
-		4F1A012726A1C07100253599 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012526A1C07100253599 /* Main.storyboard */; };
 		4F1A012926A1C07300253599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012826A1C07300253599 /* Assets.xcassets */; };
 		4F1A012C26A1C07300253599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012A26A1C07300253599 /* LaunchScreen.storyboard */; };
 		4F1A012F26A1C07300253599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A012E26A1C07300253599 /* main.m */; };
@@ -20,11 +17,6 @@
 		4F1A011926A1C07000253599 /* Eatsthesoul_Task8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eatsthesoul_Task8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1A011C26A1C07000253599 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F1A011D26A1C07000253599 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4F1A011F26A1C07000253599 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		4F1A012026A1C07000253599 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		4F1A012226A1C07100253599 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4F1A012326A1C07100253599 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4F1A012626A1C07100253599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F1A012826A1C07300253599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F1A012B26A1C07300253599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F1A012D26A1C07300253599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,11 +55,6 @@
 			children = (
 				4F1A011C26A1C07000253599 /* AppDelegate.h */,
 				4F1A011D26A1C07000253599 /* AppDelegate.m */,
-				4F1A011F26A1C07000253599 /* SceneDelegate.h */,
-				4F1A012026A1C07000253599 /* SceneDelegate.m */,
-				4F1A012226A1C07100253599 /* ViewController.h */,
-				4F1A012326A1C07100253599 /* ViewController.m */,
-				4F1A012526A1C07100253599 /* Main.storyboard */,
 				4F1A012826A1C07300253599 /* Assets.xcassets */,
 				4F1A012A26A1C07300253599 /* LaunchScreen.storyboard */,
 				4F1A012D26A1C07300253599 /* Info.plist */,
@@ -134,7 +121,6 @@
 			files = (
 				4F1A012C26A1C07300253599 /* LaunchScreen.storyboard in Resources */,
 				4F1A012926A1C07300253599 /* Assets.xcassets in Resources */,
-				4F1A012726A1C07100253599 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,24 +131,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F1A012426A1C07100253599 /* ViewController.m in Sources */,
 				4F1A011E26A1C07000253599 /* AppDelegate.m in Sources */,
 				4F1A012F26A1C07300253599 /* main.m in Sources */,
-				4F1A012126A1C07000253599 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F1A012526A1C07100253599 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F1A012626A1C07100253599 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4F1A012A26A1C07300253599 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -225,7 +201,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
