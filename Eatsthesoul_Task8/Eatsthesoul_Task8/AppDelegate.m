@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ArtistVC.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-//    window.rootViewController = 
+    UIViewController *artistVC = [[ArtistVC alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: artistVC];
+    window.rootViewController = nvc;
     self.window = window;
     [self.window makeKeyAndVisible];
     return YES;

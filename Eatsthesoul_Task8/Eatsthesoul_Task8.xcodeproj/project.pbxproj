@@ -13,6 +13,7 @@
 		4F1A012F26A1C07300253599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A012E26A1C07300253599 /* main.m */; };
 		4F61E1C426A1D20900B10B94 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F61E1C226A1D20900B10B94 /* Montserrat-Regular.ttf */; };
 		4F61E1C526A1D20900B10B94 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F61E1C326A1D20900B10B94 /* Montserrat-Medium.ttf */; };
+		4F61E1C826A1D82800B10B94 /* ArtistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61E1C726A1D82800B10B94 /* ArtistVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		4F1A012E26A1C07300253599 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F61E1C226A1D20900B10B94 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		4F61E1C326A1D20900B10B94 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		4F61E1C626A1D82800B10B94 /* ArtistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistVC.h; sourceTree = "<group>"; };
+		4F61E1C726A1D82800B10B94 /* ArtistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			children = (
 				4F1A011C26A1C07000253599 /* AppDelegate.h */,
 				4F1A011D26A1C07000253599 /* AppDelegate.m */,
+				4F61E1C926A1D83F00B10B94 /* ViewControllers */,
 				4F61E1C126A1D1D400B10B94 /* Fonts */,
 				4F1A012826A1C07300253599 /* Assets.xcassets */,
 				4F1A012A26A1C07300253599 /* LaunchScreen.storyboard */,
@@ -75,6 +79,23 @@
 				4F61E1C226A1D20900B10B94 /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4F61E1C926A1D83F00B10B94 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F61E1CA26A1D85300B10B94 /* ArtistVC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4F61E1CA26A1D85300B10B94 /* ArtistVC */ = {
+			isa = PBXGroup;
+			children = (
+				4F61E1C626A1D82800B10B94 /* ArtistVC.h */,
+				4F61E1C726A1D82800B10B94 /* ArtistVC.m */,
+			);
+			path = ArtistVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F61E1C826A1D82800B10B94 /* ArtistVC.m in Sources */,
 				4F1A011E26A1C07000253599 /* AppDelegate.m in Sources */,
 				4F1A012F26A1C07300253599 /* main.m in Sources */,
 			);
