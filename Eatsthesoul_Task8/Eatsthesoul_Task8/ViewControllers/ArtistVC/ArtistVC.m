@@ -17,10 +17,5 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     self.navigationItem.title = @"Artist";
-
-//    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-//                                    [UIColor whiteColor],NSForegroundColorAttributeName,
-//                                    [UIColor whiteColor],NSBackgroundColorAttributeName,nil];
-//    self.navigationController.navigationBar.titleTextAttributes = @[NSAccessibilityFontTextAttribute : ]
 }
 @end
