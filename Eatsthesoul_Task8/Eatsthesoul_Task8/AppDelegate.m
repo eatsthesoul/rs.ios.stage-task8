@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "ArtistVC.h"
+#import "UIFont+AppFont.h"
 
 @interface AppDelegate ()
 
@@ -34,7 +35,7 @@
 
 - (void)setupNavigationBarTitle {
     NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    [UIFont fontWithName:@"Montserrat-Regular" size:17], NSFontAttributeName, nil];
+                                    [UIFont appFontWithSize:17], NSFontAttributeName, nil];
     UINavigationBar.appearance.titleTextAttributes = textAttributes;
 }
 
