@@ -22,7 +22,7 @@
         
         self.layer.cornerRadius = 8;
         
-        self.layer.shadowColor = [UIColor buttonShadowColor].CGColor;
+        self.layer.shadowColor = [UIColor greyShadowColor].CGColor;
         self.layer.shadowRadius = 2;
         self.layer.shadowOffset = CGSizeMake(0, 0);
         self.layer.shadowOpacity = 1;
@@ -40,7 +40,7 @@
         self.layer.shadowColor = [UIColor lightGreenSea].CGColor;
         self.layer.shadowRadius = 4;
     } else {
-        self.layer.shadowColor = [UIColor buttonShadowColor].CGColor;
+        self.layer.shadowColor = [UIColor greyShadowColor].CGColor;
         self.layer.shadowRadius = 2;
     }
 }

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(class, nonatomic, readonly) UIColor *lightGreenSea;
 @property(class, nonatomic, readonly) UIColor *chillSky;
 @property(class, nonatomic, readonly) UIColor *canvasShadowColor;
-@property(class, nonatomic, readonly) UIColor *buttonShadowColor;
+@property(class, nonatomic, readonly) UIColor *greyShadowColor;
 
 @end
 
