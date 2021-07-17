@@ -8,8 +8,9 @@
 #import "ArtistVC.h"
 #import "CanvasView.h"
 #import "RSButton.h"
+#import "CustomPresentationController.h"
 
-@interface ArtistVC ()
+@interface ArtistVC () <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) UIView *canvasView;
 @property (nonatomic, strong) RSButton *openPaletteButton;
@@ -28,7 +29,7 @@
     
     [self setupUIElements];
     [self setupAppearance];
-    
+
 }
 
 - (void)setupUIElements {
@@ -91,6 +92,15 @@
         [self.shareButton.topAnchor constraintEqualToAnchor:self.drawButton.bottomAnchor constant:20],
         [self.shareButton.trailingAnchor constraintEqualToAnchor:self.drawButton.trailingAnchor]
     ]];
+}
+
+//MARK: - UIViewControllerTransitioningDelegate
+
+- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented
+                                                      presentingViewController:(UIViewController *)presenting
+                                                          sourceViewController:(UIViewController *)source
+{
+    return [[CustomPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
 }
 
 

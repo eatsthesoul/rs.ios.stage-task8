@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F0A7D2326A3107F00A09097 /* RSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A7D2226A3107F00A09097 /* RSButton.m */; };
+		4F0A7D2A26A3542A00A09097 /* CustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A7D2926A3542A00A09097 /* CustomPresentationController.m */; };
 		4F1A011E26A1C07000253599 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A011D26A1C07000253599 /* AppDelegate.m */; };
 		4F1A012926A1C07300253599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012826A1C07300253599 /* Assets.xcassets */; };
 		4F1A012C26A1C07300253599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012A26A1C07300253599 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,8 @@
 /* Begin PBXFileReference section */
 		4F0A7D2126A3107F00A09097 /* RSButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSButton.h; sourceTree = "<group>"; };
 		4F0A7D2226A3107F00A09097 /* RSButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSButton.m; sourceTree = "<group>"; };
+		4F0A7D2826A3542A00A09097 /* CustomPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPresentationController.h; sourceTree = "<group>"; };
+		4F0A7D2926A3542A00A09097 /* CustomPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPresentationController.m; sourceTree = "<group>"; };
 		4F1A011926A1C07000253599 /* Eatsthesoul_Task8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eatsthesoul_Task8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1A011C26A1C07000253599 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F1A011D26A1C07000253599 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +66,15 @@
 				4F0A7D2226A3107F00A09097 /* RSButton.m */,
 			);
 			path = RSButton;
+			sourceTree = "<group>";
+		};
+		4F0A7D2B26A3543500A09097 /* CustomPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				4F0A7D2826A3542A00A09097 /* CustomPresentationController.h */,
+				4F0A7D2926A3542A00A09097 /* CustomPresentationController.m */,
+			);
+			path = CustomPresentationController;
 			sourceTree = "<group>";
 		};
 		4F1A011026A1C07000253599 = {
@@ -111,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				4F61E1CA26A1D85300B10B94 /* ArtistVC */,
+				4F0A7D2B26A3543500A09097 /* CustomPresentationController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -250,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F61E1C826A1D82800B10B94 /* ArtistVC.m in Sources */,
+				4F0A7D2A26A3542A00A09097 /* CustomPresentationController.m in Sources */,
 				4F61E1DD26A1F22500B10B94 /* UIFont+AppFont.m in Sources */,
 				4F61E1CE26A1E9C000B10B94 /* UIColor+HexColor.m in Sources */,
 				4F61E1D626A1EB2200B10B94 /* UIColor+CustomColors.m in Sources */,
