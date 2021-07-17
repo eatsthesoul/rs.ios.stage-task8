@@ -35,7 +35,7 @@
 
 - (void)setupNavigationBarTitle {
     NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    [UIFont appFontWithSize:17], NSFontAttributeName, nil];
+                                    [UIFont appRegularFontWithSize:17], NSFontAttributeName, nil];
     UINavigationBar.appearance.titleTextAttributes = textAttributes;
 }
 

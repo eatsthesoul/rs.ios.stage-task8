@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIFont (AppFont)
 
-+ (id)appFontWithSize:(CGFloat)size;
++ (id)appRegularFontWithSize:(CGFloat)size;
 
 @end
 
