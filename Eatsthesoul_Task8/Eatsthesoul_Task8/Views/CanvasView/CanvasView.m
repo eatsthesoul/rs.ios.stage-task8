@@ -6,6 +6,7 @@
 //
 
 #import "CanvasView.h"
+#import "UIColor+CustomColors.h"
 
 @implementation CanvasView
 
@@ -17,7 +18,7 @@
         self.layer.shadowRadius = 8;
         self.layer.shadowOpacity = 1;
         self.layer.shadowOffset = CGSizeMake(0, 0);
-        self.layer.shadowColor = [[UIColor colorWithRed:0 green:178 blue:255 alpha:0.25] CGColor];
+        self.layer.shadowColor = [UIColor canvasShadowColor].CGColor;
     }
     return self;
 }
