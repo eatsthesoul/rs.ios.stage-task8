@@ -13,4 +13,8 @@
     return [UIFont fontWithName:@"Montserrat-Regular" size:size];
 }
 
++ (id)appMediumFontWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"Montserrat-Medium" size:size];
+}
+
 @end
