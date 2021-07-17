@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F0A7D2326A3107F00A09097 /* RSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A7D2226A3107F00A09097 /* RSButton.m */; };
 		4F1A011E26A1C07000253599 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A011D26A1C07000253599 /* AppDelegate.m */; };
 		4F1A012926A1C07300253599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012826A1C07300253599 /* Assets.xcassets */; };
 		4F1A012C26A1C07300253599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012A26A1C07300253599 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F0A7D2126A3107F00A09097 /* RSButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSButton.h; sourceTree = "<group>"; };
+		4F0A7D2226A3107F00A09097 /* RSButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSButton.m; sourceTree = "<group>"; };
 		4F1A011926A1C07000253599 /* Eatsthesoul_Task8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eatsthesoul_Task8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1A011C26A1C07000253599 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F1A011D26A1C07000253599 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F0A7D2426A3108600A09097 /* RSButton */ = {
+			isa = PBXGroup;
+			children = (
+				4F0A7D2126A3107F00A09097 /* RSButton.h */,
+				4F0A7D2226A3107F00A09097 /* RSButton.m */,
+			);
+			path = RSButton;
+			sourceTree = "<group>";
+		};
 		4F1A011026A1C07000253599 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +164,7 @@
 		4F61E1DF26A1F6A400B10B94 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F0A7D2426A3108600A09097 /* RSButton */,
 				4F61E1E326A1F6C200B10B94 /* CanvasView */,
 			);
 			path = Views;
@@ -242,6 +255,7 @@
 				4F61E1D626A1EB2200B10B94 /* UIColor+CustomColors.m in Sources */,
 				4F61E1E226A1F6BE00B10B94 /* CanvasView.m in Sources */,
 				4F1A011E26A1C07000253599 /* AppDelegate.m in Sources */,
+				4F0A7D2326A3107F00A09097 /* RSButton.m in Sources */,
 				4F1A012F26A1C07300253599 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
