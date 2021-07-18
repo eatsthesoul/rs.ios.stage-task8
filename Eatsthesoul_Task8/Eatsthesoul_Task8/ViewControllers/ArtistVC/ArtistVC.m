@@ -10,6 +10,7 @@
 #import "RSButton.h"
 #import "CustomPresentationController.h"
 #import "ColorsVC.h"
+#import "Service.h"
 
 @interface ArtistVC () <UIViewControllerTransitioningDelegate>
 
@@ -33,8 +34,6 @@
     [self setupUIElements];
     [self setupAppearance];
     
-    
-
     [self.openPaletteButton addTarget:self action:@selector(tapPalleteButton) forControlEvents:UIControlEventTouchUpInside];
 }
 

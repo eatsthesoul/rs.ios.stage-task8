@@ -9,11 +9,12 @@
 #import "ColorButton.h"
 #import "UIColor+CustomColors.h"
 #import "RSButton.h"
+#import "Service.h"
 
 @interface ColorsVC ()
 
 @property (nonatomic, strong) RSButton *saveButton;
-@property (nonatomic, strong) NSMutableArray<UIButton *> *colorButtonsArray;
+@property (nonatomic, strong) NSMutableArray<ColorButton *> *colorButtonsArray;
 @property (nonatomic, strong) UIStackView *firstHorizontalStackView;
 @property (nonatomic, strong) UIStackView *secondHorizontalStackView;
 @property (nonatomic, strong) UIStackView *verticalStackView;
@@ -34,6 +35,10 @@
     [self setupTargetsForColorButtons];
     
     self.pressedButtons = [[NSMutableArray alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self updatePressedColorButtons];
 }
 
 //MARK: - UI Methods
@@ -66,7 +71,6 @@
     //color buttons
     [self addColorButtons];
     
-      
     //verticalStackView
     self.verticalStackView = [[UIStackView alloc] init];
     self.verticalStackView.axis = UILayoutConstraintAxisVertical;
@@ -116,6 +120,18 @@
     }
 }
 
+- (void)updatePressedColorButtons {
+    NSArray<UIColor *> *savedColorsArray = [[Service sharedInstance] colorsArray];
+    for(int i = 0; i < self.colorButtonsArray.count; i++) {
+        for(int j = 0; j < savedColorsArray.count; j++) {
+            if ([self.colorButtonsArray[i].enteredView.backgroundColor isEqual:savedColorsArray[j]]) {
+                [self.colorButtonsArray[i] press];
+                [self.pressedButtons addObject:self.colorButtonsArray[i]];
+            }
+        }
+    }
+}
+
 - (void)returnBackgroundColor {
     self.view.backgroundColor = UIColor.whiteColor;
 }
@@ -161,6 +177,16 @@
 }
 
 - (void)saveButtonHandler {
+    //get selected colors
+    NSMutableArray *colorsArray = [[NSMutableArray alloc] init];
+    for(int i = 0; i < self.pressedButtons.count; i++) {
+        [colorsArray addObject:self.pressedButtons[i].enteredView.backgroundColor];
+    }
+    
+    //save colors to service
+    [[Service sharedInstance] setColorsArray:colorsArray];
+    
+    //close VC
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
