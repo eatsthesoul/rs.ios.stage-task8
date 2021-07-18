@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Service : NSObject
 
 @property (nonatomic, strong) NSMutableArray<UIColor *> *colorsArray;
+@property (nonatomic, assign) float timeForPainting;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)sharedInstance;

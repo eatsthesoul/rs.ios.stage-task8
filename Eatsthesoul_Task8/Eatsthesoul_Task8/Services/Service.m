@@ -10,13 +10,12 @@
 
 @implementation Service
 
-@synthesize colorsArray = _colorsArray;
-
 - (instancetype)initPrivate
 {
     self = [super init];
     if (self) {
         _colorsArray = [[NSMutableArray alloc] init];
+        _timeForPainting = 1;
     }
     return self;
 }

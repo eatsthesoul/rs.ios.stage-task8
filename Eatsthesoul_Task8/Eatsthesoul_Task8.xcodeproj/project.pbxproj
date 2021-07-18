@@ -16,6 +16,7 @@
 		4F1A012F26A1C07300253599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A012E26A1C07300253599 /* main.m */; };
 		4F1A49ED26A36D52008804D2 /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A49EC26A36D52008804D2 /* ColorButton.m */; };
 		4F1A49F126A4612B008804D2 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A49F026A4612B008804D2 /* Service.m */; };
+		4F1A49F626A48D15008804D2 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A49F526A48D15008804D2 /* TimerVC.swift */; };
 		4F61E1C426A1D20900B10B94 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F61E1C226A1D20900B10B94 /* Montserrat-Regular.ttf */; };
 		4F61E1C526A1D20900B10B94 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F61E1C326A1D20900B10B94 /* Montserrat-Medium.ttf */; };
 		4F61E1C826A1D82800B10B94 /* ArtistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61E1C726A1D82800B10B94 /* ArtistVC.m */; };
@@ -43,6 +44,8 @@
 		4F1A49EC26A36D52008804D2 /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
 		4F1A49EF26A4612B008804D2 /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		4F1A49F026A4612B008804D2 /* Service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		4F1A49F426A48D14008804D2 /* Eatsthesoul_Task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eatsthesoul_Task8-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F1A49F526A48D15008804D2 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		4F61E1C226A1D20900B10B94 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		4F61E1C326A1D20900B10B94 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		4F61E1C626A1D82800B10B94 /* ArtistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistVC.h; sourceTree = "<group>"; };
@@ -147,6 +150,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		4F1A49F226A48BBB008804D2 /* TimerVC */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A49F526A48D15008804D2 /* TimerVC.swift */,
+			);
+			path = TimerVC;
+			sourceTree = "<group>";
+		};
+		4F1A49F726A48DA0008804D2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A49F426A48D14008804D2 /* Eatsthesoul_Task8-Bridging-Header.h */,
+				4F1A49F226A48BBB008804D2 /* TimerVC */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		4F61E1C126A1D1D400B10B94 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +182,7 @@
 				4F61E1CA26A1D85300B10B94 /* ArtistVC */,
 				4F0A7D2B26A3543500A09097 /* CustomPresentationController */,
 				4F0A7D3226A35DCD00A09097 /* ColorsVC */,
+				4F1A49F726A48DA0008804D2 /* Swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +282,7 @@
 				TargetAttributes = {
 					4F1A011826A1C07000253599 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -301,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1A49F626A48D15008804D2 /* TimerVC.swift in Sources */,
 				4F61E1C826A1D82800B10B94 /* ArtistVC.m in Sources */,
 				4F0A7D2A26A3542A00A09097 /* CustomPresentationController.m in Sources */,
 				4F61E1DD26A1F22500B10B94 /* UIFont+AppFont.m in Sources */,
@@ -447,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28423D34T2;
 				INFOPLIST_FILE = Eatsthesoul_Task8/Info.plist;
@@ -456,6 +480,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eatsthesoul.Eatsthesoul-Task8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Eatsthesoul_Task8/ViewControllers/Swift/Eatsthesoul_Task8-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -465,6 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28423D34T2;
 				INFOPLIST_FILE = Eatsthesoul_Task8/Info.plist;
@@ -474,6 +502,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eatsthesoul.Eatsthesoul-Task8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Eatsthesoul_Task8/ViewControllers/Swift/Eatsthesoul_Task8-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -81,6 +81,7 @@
         [UIView animateWithDuration:0.09 animations:^{
             [NSLayoutConstraint deactivateConstraints:self.pressedEnteredViewInsets];
             [NSLayoutConstraint activateConstraints:self.defaultEnteredViewInsets];
+            self.enteredView.layer.cornerRadius = 6;
             [self layoutIfNeeded];
         }];
         
@@ -91,6 +92,7 @@
         [UIView animateWithDuration:0.09 animations:^{
             [NSLayoutConstraint deactivateConstraints:self.defaultEnteredViewInsets];
             [NSLayoutConstraint activateConstraints:self.pressedEnteredViewInsets];
+            self.enteredView.layer.cornerRadius = 9;
             [self layoutIfNeeded];
         }];
     }

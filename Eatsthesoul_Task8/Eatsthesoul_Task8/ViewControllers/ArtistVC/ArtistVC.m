@@ -11,6 +11,9 @@
 #import "CustomPresentationController.h"
 #import "ColorsVC.h"
 #import "Service.h"
+#import "Eatsthesoul_Task8-Swift.h"
+
+@class TimerVC;
 
 @interface ArtistVC () <UIViewControllerTransitioningDelegate>
 
@@ -21,6 +24,7 @@
 @property (nonatomic, strong) RSButton *shareButton;
 
 @property (nonatomic, strong) ColorsVC *colorsVC;
+@property (nonatomic, strong) TimerVC *timerVC;
 
 @end
 
@@ -34,14 +38,6 @@
     [self setupUIElements];
     [self setupAppearance];
     
-    [self.openPaletteButton addTarget:self action:@selector(tapPalleteButton) forControlEvents:UIControlEventTouchUpInside];
-}
-
-- (void)tapPalleteButton {
-    self.colorsVC = [[ColorsVC alloc] init];
-    self.colorsVC.transitioningDelegate = self;
-    self.colorsVC.modalPresentationStyle = UIModalPresentationCustom;
-    [self presentViewController:self.colorsVC animated:true completion:nil];
 }
 
 - (void)setupUIElements {
@@ -55,11 +51,13 @@
     self.openPaletteButton = [[RSButton alloc] init];
     self.openPaletteButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.openPaletteButton setTitle:@"Open Palette" forState:UIControlStateNormal];
+    [self.openPaletteButton addTarget:self action:@selector(tapPalleteButton) forControlEvents:UIControlEventTouchUpInside];
     
     //openTimerButton
     self.openTimerButton = [[RSButton alloc] init];
     self.openTimerButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.openTimerButton setTitle:@"Open Timer" forState:UIControlStateNormal];
+    [self.openTimerButton addTarget:self action:@selector(tapTimerButton) forControlEvents:UIControlEventTouchUpInside];
     
     //drawButton
     self.drawButton = [[RSButton alloc] init];
@@ -104,6 +102,22 @@
         [self.shareButton.topAnchor constraintEqualToAnchor:self.drawButton.bottomAnchor constant:20],
         [self.shareButton.trailingAnchor constraintEqualToAnchor:self.drawButton.trailingAnchor]
     ]];
+}
+
+//MARK: - Handlers
+
+- (void)tapPalleteButton {
+    self.colorsVC = [[ColorsVC alloc] init];
+    self.colorsVC.transitioningDelegate = self;
+    self.colorsVC.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:self.colorsVC animated:true completion:nil];
+}
+
+- (void)tapTimerButton {
+    self.timerVC = [[TimerVC alloc] init];
+    self.timerVC.transitioningDelegate = self;
+    self.timerVC.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:self.timerVC animated:true completion:nil];
 }
 
 //MARK: - UIViewControllerTransitioningDelegate
