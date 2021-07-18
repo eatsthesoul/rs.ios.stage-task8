@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F0A7D2326A3107F00A09097 /* RSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A7D2226A3107F00A09097 /* RSButton.m */; };
 		4F0A7D2A26A3542A00A09097 /* CustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A7D2926A3542A00A09097 /* CustomPresentationController.m */; };
+		4F0A7D3126A35DC600A09097 /* ColorsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A7D3026A35DC600A09097 /* ColorsVC.m */; };
 		4F1A011E26A1C07000253599 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A011D26A1C07000253599 /* AppDelegate.m */; };
 		4F1A012926A1C07300253599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012826A1C07300253599 /* Assets.xcassets */; };
 		4F1A012C26A1C07300253599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A012A26A1C07300253599 /* LaunchScreen.storyboard */; };

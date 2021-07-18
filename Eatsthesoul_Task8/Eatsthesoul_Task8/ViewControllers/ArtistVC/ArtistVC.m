@@ -9,6 +9,7 @@
 #import "CanvasView.h"
 #import "RSButton.h"
 #import "CustomPresentationController.h"
+#import "ColorsVC.h"
 
 @interface ArtistVC () <UIViewControllerTransitioningDelegate>
 
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) RSButton *openTimerButton;
 @property (nonatomic, strong) RSButton *drawButton;
 @property (nonatomic, strong) RSButton *shareButton;
+
+@property (nonatomic, strong) ColorsVC *colorsVC;
 
 @end
 
@@ -29,7 +32,17 @@
     
     [self setupUIElements];
     [self setupAppearance];
+    
+    
 
+    [self.openPaletteButton addTarget:self action:@selector(tapPalleteButton) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)tapPalleteButton {
+    self.colorsVC = [[ColorsVC alloc] init];
+    self.colorsVC.transitioningDelegate = self;
+    self.colorsVC.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:self.colorsVC animated:true completion:nil];
 }
 
 - (void)setupUIElements {
