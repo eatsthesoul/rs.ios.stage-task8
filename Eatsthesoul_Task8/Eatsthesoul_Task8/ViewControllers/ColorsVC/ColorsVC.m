@@ -132,8 +132,10 @@
     }
 }
 
-- (void)returnBackgroundColor {
-    self.view.backgroundColor = UIColor.whiteColor;
+- (void)resetBackgroundColor {
+    [UIView animateWithDuration:0.4 animations:^{
+        self.view.backgroundColor = UIColor.whiteColor;
+    } completion:nil];
 }
 
 //MARK: - Handlers
@@ -161,13 +163,15 @@
         [self.pressedButtons addObject:sender];
         
         //change view background color
-        self.view.backgroundColor = sender.enteredView.backgroundColor;
+        [UIView animateWithDuration:0.4 animations:^{
+            self.view.backgroundColor = sender.enteredView.backgroundColor;
+        } completion:nil];
         
         //retun default background color after 1 sec
         if (self.timer.isValid) { [self.timer invalidate]; }
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1
                                                       target:self
-                                                    selector:@selector(returnBackgroundColor)
+                                                    selector:@selector(resetBackgroundColor)
                                                     userInfo:nil
                                                      repeats:NO];
     } else {
