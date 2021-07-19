@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "ArtistVC.h"
 #import "UIFont+AppFont.h"
+#import "UIColor+CustomColors.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,7 @@
     self.window = window;
     [self.window makeKeyAndVisible];
     
-    [self setupNavigationBarTitle];
+    [self setupNavigationBar];
     
     return YES;
 }
@@ -33,10 +34,12 @@
     return [[UINavigationController alloc] initWithRootViewController: artistVC];
 }
 
-- (void)setupNavigationBarTitle {
+- (void)setupNavigationBar {
     NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                     [UIFont appRegularFontWithSize:17], NSFontAttributeName, nil];
     UINavigationBar.appearance.titleTextAttributes = textAttributes;
+    UIView.appearance.tintColor = [UIColor lightGreenSea];
+    [UIBarButtonItem.appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont appRegularFontWithSize:17], NSFontAttributeName, nil] forState:UIControlStateNormal];
 }
 
 
