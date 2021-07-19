@@ -80,6 +80,7 @@
     self.shareButton = [[RSButton alloc] init];
     self.shareButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.shareButton setTitle:@"Share" forState:UIControlStateNormal];
+    [self.shareButton addTarget:self action:@selector(tapShareButton) forControlEvents:UIControlEventTouchUpInside];
     
     //rightBarButtonItem
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Drawings"
@@ -226,6 +227,15 @@
         [self setIdleCondition];
         [self.canvasView setupLayersStrokeEnd:0];
     }
+}
+
+- (void)tapShareButton {
+    UIGraphicsBeginImageContext(self.canvasView.bounds.size);
+    [self.canvasView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[image] applicationActivities:nil];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 //MARK: - UIViewControllerTransitioningDelegate
