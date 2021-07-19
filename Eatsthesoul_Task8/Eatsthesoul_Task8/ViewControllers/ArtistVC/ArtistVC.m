@@ -12,10 +12,13 @@
 #import "ColorsVC.h"
 #import "Service.h"
 #import "Eatsthesoul_Task8-Swift.h"
+#import "UIColor+CustomColors.h"
 
 @class TimerVC;
 
 @interface ArtistVC () <UIViewControllerTransitioningDelegate>
+
+@property (nonatomic, assign) ArtistVCCondition condition;
 
 @property (nonatomic, strong) CanvasView *canvasView;
 @property (nonatomic, strong) RSButton *openPaletteButton;
@@ -38,7 +41,7 @@
     
     [self setupUIElements];
     [self setupAppearance];
-    
+    [self setIdleCondition];
 }
 
 - (void)setupUIElements {
@@ -109,6 +112,32 @@
         [self.shareButton.topAnchor constraintEqualToAnchor:self.drawButton.bottomAnchor constant:20],
         [self.shareButton.trailingAnchor constraintEqualToAnchor:self.drawButton.trailingAnchor]
     ]];
+}
+
+- (void)setIdleCondition {
+    self.condition = ArtistVCConditionIdle;
+    [self.openPaletteButton setEnabled:YES];
+    [self.openTimerButton setEnabled:YES];
+    [self.drawButton setEnabled:YES];
+    [self.shareButton setEnabled:NO];
+    [self.drawButton setTitle:@"Draw" forState:UIControlStateNormal];
+}
+
+- (void)setDrawCondition {
+    self.condition = ArtistVCConditionDraw;
+    [self.openPaletteButton setEnabled:NO];
+    [self.openTimerButton setEnabled:NO];
+    [self.drawButton setEnabled:NO];
+    [self.shareButton setEnabled:NO];
+}
+
+- (void)setDoneCondition {
+    self.condition = ArtistVCConditionDone;
+    [self.openPaletteButton setEnabled:NO];
+    [self.openTimerButton setEnabled:NO];
+    [self.drawButton setEnabled:YES];
+    [self.shareButton setEnabled:YES];
+    [self.drawButton setTitle:@"Reset" forState:UIControlStateNormal];
 }
 
 //MARK: - Handlers

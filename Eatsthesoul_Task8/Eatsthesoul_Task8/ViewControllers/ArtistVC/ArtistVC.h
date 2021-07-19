@@ -9,6 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, ArtistVCCondition) {
+    ArtistVCConditionIdle,
+    ArtistVCConditionDraw,
+    ArtistVCConditionDone
+} NS_SWIFT_NAME(ArtistVCCondition);
+
 @interface ArtistVC : UIViewController
 
 @end
