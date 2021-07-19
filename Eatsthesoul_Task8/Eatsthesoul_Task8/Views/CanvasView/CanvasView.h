@@ -9,7 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, CanvasType) {
+    CanvasTypePlanet,
+    CanvasTypeHead,
+    CanvasTypeTree,
+    CanvasTypeLandscape
+} NS_SWIFT_NAME(CanvasType);
+
 @interface CanvasView : UIView
+
+@property (nonatomic, assign) CanvasType type;
 
 @end
 
