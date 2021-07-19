@@ -17,7 +17,7 @@
 
 @interface ArtistVC () <UIViewControllerTransitioningDelegate>
 
-@property (nonatomic, strong) UIView *canvasView;
+@property (nonatomic, strong) CanvasView *canvasView;
 @property (nonatomic, strong) RSButton *openPaletteButton;
 @property (nonatomic, strong) RSButton *openTimerButton;
 @property (nonatomic, strong) RSButton *drawButton;
@@ -25,6 +25,7 @@
 
 @property (nonatomic, strong) ColorsVC *colorsVC;
 @property (nonatomic, strong) TimerVC *timerVC;
+@property (nonatomic, strong) DrawingsVC *drawingsVC;
 
 @end
 
@@ -63,12 +64,18 @@
     self.drawButton = [[RSButton alloc] init];
     self.drawButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.drawButton setTitle:@"Draw" forState:UIControlStateNormal];
+    [self.drawButton addTarget:self action:@selector(tapDrawButton) forControlEvents:UIControlEventTouchUpInside];
     
     //shareButton
     self.shareButton = [[RSButton alloc] init];
     self.shareButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.shareButton setTitle:@"Share" forState:UIControlStateNormal];
     
+    //rightBarButtonItem
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Drawings"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(tapDrawingsButton)];
 }
 
 - (void)setupAppearance {
@@ -106,6 +113,11 @@
 
 //MARK: - Handlers
 
+- (void)tapDrawingsButton {
+    self.drawingsVC = [[DrawingsVC alloc] init];
+    [self.navigationController pushViewController:self.drawingsVC animated:true];
+}
+
 - (void)tapPalleteButton {
     self.colorsVC = [[ColorsVC alloc] init];
     self.colorsVC.transitioningDelegate = self;
@@ -118,6 +130,10 @@
     self.timerVC.transitioningDelegate = self;
     self.timerVC.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:self.timerVC animated:true completion:nil];
+}
+
+- (void)tapDrawButton {
+    self.canvasView.type = Service.sharedInstance.canvasType;
 }
 
 //MARK: - UIViewControllerTransitioningDelegate
