@@ -13,6 +13,10 @@
 #import "Service.h"
 #import "Eatsthesoul_Task8-Swift.h"
 #import "UIColor+CustomColors.h"
+#import "CanvasView+Landscape.h"
+#import "CanvasView+Tree.h"
+#import "CanvasView+Head.h"
+#import "CanvasView+Planet.h"
 
 @class TimerVC;
 
@@ -29,6 +33,9 @@
 @property (nonatomic, strong) ColorsVC *colorsVC;
 @property (nonatomic, strong) TimerVC *timerVC;
 @property (nonatomic, strong) DrawingsVC *drawingsVC;
+
+@property(nonatomic, copy) NSTimer *redrawTimer;
+//@property(nonatomic, assign) float timerValue;
 
 @end
 
@@ -140,6 +147,51 @@
     [self.drawButton setTitle:@"Reset" forState:UIControlStateNormal];
 }
 
+- (NSArray<UIColor *> *)generateColorsForCanvas {
+    NSMutableArray *colors = [[NSMutableArray alloc] initWithArray:Service.sharedInstance.colorsArray];
+    while (colors.count < 3) {
+        [colors addObject:UIColor.blackColor];
+    }
+    return [colors copy];
+}
+
+- (void)getVectorForCanvas {
+    //getting necessary data from Service
+    self.canvasView.type = Service.sharedInstance.canvasType;
+    
+    //getting colors
+    NSArray *colors = [self generateColorsForCanvas];
+    
+    switch (self.canvasView.type) {
+        case CanvasTypeLandscape:
+            [self.canvasView getLandscapeVectorWithColors:colors];
+            break;
+        case CanvasTypeTree:
+            [self.canvasView getTreeVectorWithColors:colors];
+            break;
+        case CanvasTypeHead:
+            [self.canvasView getHeadVectorWithColors:colors];
+            break;
+        case CanvasTypePlanet:
+            [self.canvasView getPlanetVectorWithColors:colors];
+            break;
+    }
+}
+
+- (void)drawCanvas {
+    float timerValue = Service.sharedInstance.timeForPainting;
+    
+    __block float stroke = 0;
+    _redrawTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        stroke += (0.01667 / timerValue);
+        [self.canvasView setupLayersStrokeEnd:stroke];
+        if (stroke >= 1)  {
+            [timer invalidate];
+            [self setDoneCondition];
+        }
+    }];
+}
+
 //MARK: - Handlers
 
 - (void)tapDrawingsButton {
@@ -162,7 +214,18 @@
 }
 
 - (void)tapDrawButton {
-    self.canvasView.type = Service.sharedInstance.canvasType;
+    //idle condition
+    if (self.condition == ArtistVCConditionIdle) {
+        [self setDrawCondition];
+        [self getVectorForCanvas];
+        [self drawCanvas];
+    }
+    
+    //done condition
+    if (self.condition == ArtistVCConditionDone) {
+        [self setIdleCondition];
+        [self.canvasView setupLayersStrokeEnd:0];
+    }
 }
 
 //MARK: - UIViewControllerTransitioningDelegate

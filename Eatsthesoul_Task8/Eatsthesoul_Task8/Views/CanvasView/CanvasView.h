@@ -20,6 +20,14 @@ typedef NS_ENUM(NSInteger, CanvasType) {
 
 @property (nonatomic, assign) CanvasType type;
 
+@property CAShapeLayer *shape1Layer;
+@property CAShapeLayer *shape2Layer;
+@property CAShapeLayer *shape3Layer;
+
+- (void)setupLayersStrokeEnd:(float)strokeEnd;
+- (void)addLayers;
+- (void)removeLayers;
+
 @end
 
 NS_ASSUME_NONNULL_END
