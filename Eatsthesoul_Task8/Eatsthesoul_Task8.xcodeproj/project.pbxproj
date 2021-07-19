@@ -17,6 +17,7 @@
 		4F1A49ED26A36D52008804D2 /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A49EC26A36D52008804D2 /* ColorButton.m */; };
 		4F1A49F126A4612B008804D2 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A49F026A4612B008804D2 /* Service.m */; };
 		4F1A49F626A48D15008804D2 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A49F526A48D15008804D2 /* TimerVC.swift */; };
+		4F1A49F926A4BADE008804D2 /* DrawingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A49F826A4BADE008804D2 /* DrawingsVC.swift */; };
 		4F61E1C426A1D20900B10B94 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F61E1C226A1D20900B10B94 /* Montserrat-Regular.ttf */; };
 		4F61E1C526A1D20900B10B94 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F61E1C326A1D20900B10B94 /* Montserrat-Medium.ttf */; };
 		4F61E1C826A1D82800B10B94 /* ArtistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61E1C726A1D82800B10B94 /* ArtistVC.m */; };
@@ -46,6 +47,7 @@
 		4F1A49F026A4612B008804D2 /* Service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		4F1A49F426A48D14008804D2 /* Eatsthesoul_Task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eatsthesoul_Task8-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F1A49F526A48D15008804D2 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
+		4F1A49F826A4BADE008804D2 /* DrawingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsVC.swift; sourceTree = "<group>"; };
 		4F61E1C226A1D20900B10B94 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		4F61E1C326A1D20900B10B94 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		4F61E1C626A1D82800B10B94 /* ArtistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistVC.h; sourceTree = "<group>"; };
@@ -150,19 +152,12 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		4F1A49F226A48BBB008804D2 /* TimerVC */ = {
-			isa = PBXGroup;
-			children = (
-				4F1A49F526A48D15008804D2 /* TimerVC.swift */,
-			);
-			path = TimerVC;
-			sourceTree = "<group>";
-		};
 		4F1A49F726A48DA0008804D2 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
 				4F1A49F426A48D14008804D2 /* Eatsthesoul_Task8-Bridging-Header.h */,
-				4F1A49F226A48BBB008804D2 /* TimerVC */,
+				4F1A49F526A48D15008804D2 /* TimerVC.swift */,
+				4F1A49F826A4BADE008804D2 /* DrawingsVC.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -334,6 +329,7 @@
 				4F61E1E226A1F6BE00B10B94 /* CanvasView.m in Sources */,
 				4F1A011E26A1C07000253599 /* AppDelegate.m in Sources */,
 				4F0A7D2326A3107F00A09097 /* RSButton.m in Sources */,
+				4F1A49F926A4BADE008804D2 /* DrawingsVC.swift in Sources */,
 				4F0A7D3126A35DC600A09097 /* ColorsVC.m in Sources */,
 				4F1A012F26A1C07300253599 /* main.m in Sources */,
 			);

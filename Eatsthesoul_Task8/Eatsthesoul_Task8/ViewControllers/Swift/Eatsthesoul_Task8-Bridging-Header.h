@@ -6,3 +6,4 @@
 #import "UIColor+CustomColors.h"
 #import "Service.h"
 #import "UIFont+AppFont.h"
+#import "CanvasView.h"
