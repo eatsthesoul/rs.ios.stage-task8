@@ -6,6 +6,7 @@
 //
 
 #import "Service.h"
+#import "CanvasView.h"
 
 
 @implementation Service
@@ -16,6 +17,7 @@
     if (self) {
         _colorsArray = [[NSMutableArray alloc] init];
         _timeForPainting = 1;
+        _canvasType = CanvasTypeHead;
     }
     return self;
 }

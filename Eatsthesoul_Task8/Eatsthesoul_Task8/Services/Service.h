@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "CanvasView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,12 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableArray<UIColor *> *colorsArray;
 @property (nonatomic, assign) float timeForPainting;
+@property (nonatomic, assign) CanvasType canvasType;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)sharedInstance;
-
-//+ (NSArray<UIColor *> *)colorsArray;
-//+ (void)setColorsArray:(NSArray<UIColor *> *)colorsArray;
 
 @end
 
