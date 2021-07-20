@@ -36,7 +36,6 @@
 @property (nonatomic, strong) DrawingsVC *drawingsVC;
 
 @property(nonatomic, copy) NSTimer *redrawTimer;
-//@property(nonatomic, assign) float timerValue;
 
 @end
 
@@ -191,7 +190,7 @@
     float timerValue = Service.sharedInstance.timeForPainting;
     
     __block float stroke = 0;
-    _redrawTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    self.redrawTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 repeats:YES block:^(NSTimer * _Nonnull timer) {
         stroke += (0.01667 / timerValue);
         [self.canvasView setupLayersStrokeEnd:stroke];
         if (stroke >= 1)  {
@@ -205,7 +204,7 @@
     float timerValue = 0.5;
     
     __block float stroke = 1;
-    _redrawTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    self.redrawTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 repeats:YES block:^(NSTimer * _Nonnull timer) {
         stroke -= (0.01667 / timerValue);
         [self.canvasView setupLayersStrokeEnd:stroke];
         if (stroke <= 0)  {
@@ -267,7 +266,5 @@
 {
     return [[CustomPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
 }
-
-
 
 @end

@@ -74,9 +74,9 @@
 }
 
 - (void)press {
-    if (_isPressed) {
+    if (self.isPressed) {
 
-        _isPressed = NO;
+        self.isPressed = NO;
 
         [UIView animateWithDuration:0.09 animations:^{
             [NSLayoutConstraint deactivateConstraints:self.pressedEnteredViewInsets];
@@ -87,7 +87,7 @@
         
     } else {
         
-        _isPressed = YES;
+        self.isPressed = YES;
         
         [UIView animateWithDuration:0.09 animations:^{
             [NSLayoutConstraint deactivateConstraints:self.defaultEnteredViewInsets];
