@@ -15,7 +15,7 @@ class DrawingsButton: UIButton {
         backgroundColor = UIColor.white;
         
         setTitleColor(.lightGreenSea, for: .normal)
-        titleLabel?.font = UIFont.appMediumFont(withSize: 18) as? UIFont
+        titleLabel?.font = UIFont.montserratMedium(withSize: 18) as? UIFont
         
         self.layer.cornerRadius = 10;
         

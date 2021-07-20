@@ -18,7 +18,7 @@
         self.backgroundColor = UIColor.whiteColor;
         
         [self setTitleColor:[UIColor lightGreenSea] forState:UIControlStateNormal];
-        self.titleLabel.font = [UIFont appMediumFontWithSize:18];
+        self.titleLabel.font = [UIFont montserratMediumWithSize:18];
         
         self.layer.cornerRadius = 8;
         

@@ -9,11 +9,11 @@
 
 @implementation UIFont (AppFont)
 
-+ (id)appRegularFontWithSize:(CGFloat)size {
++ (id)montserratRegularWithSize:(CGFloat)size {
     return [UIFont fontWithName:@"Montserrat-Regular" size:size];
 }
 
-+ (id)appMediumFontWithSize:(CGFloat)size {
++ (id)montserratMediumWithSize:(CGFloat)size {
     return [UIFont fontWithName:@"Montserrat-Medium" size:size];
 }
 

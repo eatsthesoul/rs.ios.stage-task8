@@ -31,7 +31,7 @@ class TimerVC: UIViewController {
     
     private let leftLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.appRegularFont(withSize: 18) as? UIFont
+        label.font = UIFont.montserratRegular(withSize: 18) as? UIFont
         label.text = "1"
         label.translatesAutoresizingMaskIntoConstraints = false;
         return label
@@ -39,7 +39,7 @@ class TimerVC: UIViewController {
     
     private let rightLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.appRegularFont(withSize: 18) as? UIFont
+        label.font = UIFont.montserratRegular(withSize: 18) as? UIFont
         label.text = "5"
         label.translatesAutoresizingMaskIntoConstraints = false;
         return label
@@ -47,7 +47,7 @@ class TimerVC: UIViewController {
     
     private let bottomLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.appRegularFont(withSize: 18) as? UIFont
+        label.font = UIFont.montserratRegular(withSize: 18) as? UIFont
         label.text = "1.00 s"
         label.translatesAutoresizingMaskIntoConstraints = false;
         return label

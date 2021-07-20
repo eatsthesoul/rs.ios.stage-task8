@@ -36,10 +36,10 @@
 
 - (void)setupNavigationBar {
     NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    [UIFont appRegularFontWithSize:17], NSFontAttributeName, nil];
+                                    [UIFont montserratRegularWithSize:17], NSFontAttributeName, nil];
     UINavigationBar.appearance.titleTextAttributes = textAttributes;
     UIView.appearance.tintColor = [UIColor lightGreenSea];
-    [UIBarButtonItem.appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont appRegularFontWithSize:17], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    [UIBarButtonItem.appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont montserratRegularWithSize:17], NSFontAttributeName, nil] forState:UIControlStateNormal];
 }
 
 
