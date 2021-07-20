@@ -42,6 +42,8 @@
 
 @implementation ArtistVC
 
+//MARK: Lifecycle methods
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -51,6 +53,8 @@
     [self setupAppearance];
     [self setIdleCondition];
 }
+
+//MARK: Private UI Methods
 
 - (void)setupUIElements {
     
@@ -148,6 +152,8 @@
     [self.shareButton setEnabled:YES];
     [self.drawButton setTitle:@"Reset" forState:UIControlStateNormal];
 }
+
+//MARK: Canvas Drawing Methods
 
 - (NSArray<UIColor *> *)generateColorsForCanvas {
     NSMutableArray *colors = [[NSMutableArray alloc] initWithArray:Service.sharedInstance.colorsArray];
