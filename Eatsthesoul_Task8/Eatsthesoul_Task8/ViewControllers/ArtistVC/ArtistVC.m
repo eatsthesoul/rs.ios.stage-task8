@@ -195,6 +195,20 @@
     }];
 }
 
+- (void)clearCanvas {
+    float timerValue = 0.5;
+    
+    __block float stroke = 1;
+    _redrawTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        stroke -= (0.01667 / timerValue);
+        [self.canvasView setupLayersStrokeEnd:stroke];
+        if (stroke <= 0)  {
+            [timer invalidate];
+            [self setIdleCondition];
+        }
+    }];
+}
+
 //MARK: - Handlers
 
 - (void)tapDrawingsButton {
@@ -226,8 +240,7 @@
     
     //done condition
     if (self.condition == ArtistVCConditionDone) {
-        [self setIdleCondition];
-        [self.canvasView setupLayersStrokeEnd:0];
+        [self clearCanvas];
     }
 }
 
