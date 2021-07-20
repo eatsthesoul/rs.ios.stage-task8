@@ -7,8 +7,9 @@
 
 #import "ColorsVC.h"
 #import "ColorButton.h"
-#import "UIColor+CustomColors.h"
 #import "RSButton.h"
+#import "UIColor+CustomColors.h"
+#import "UIView+Animation.h"
 #import "Service.h"
 
 @interface ColorsVC ()
@@ -27,6 +28,8 @@
 
 @implementation ColorsVC
 
+//MARK: Lifecycle methods
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -41,7 +44,7 @@
     [self updatePressedColorButtons];
 }
 
-//MARK: - UI Methods
+//MARK: - Private UI Methods
 
 - (void)setupUIElements {
     //self view
@@ -132,14 +135,6 @@
     }
 }
 
-- (void)resetBackgroundColor {
-    [UIView animateWithDuration:0.4 animations:^{
-        self.view.backgroundColor = UIColor.whiteColor;
-    } completion:nil];
-}
-
-//MARK: - Handlers
-
 - (void)setupTargetsForColorButtons {
     for(int i = 0; i < self.colorButtonsArray.count; i++) {
         [self.colorButtonsArray[i] addTarget:self
@@ -147,6 +142,8 @@
                             forControlEvents:UIControlEventTouchUpInside];
     }
 }
+
+//MARK: - Handlers
 
 - (void)tapColoredButton:(ColorButton *)sender {
     
@@ -162,10 +159,8 @@
         [sender press];
         [self.pressedButtons addObject:sender];
         
-        //change view background color
-        [UIView animateWithDuration:0.4 animations:^{
-            self.view.backgroundColor = sender.enteredView.backgroundColor;
-        } completion:nil];
+        //change view background color to pressed button color
+        [self.view changeBackgroundColor:sender.enteredView.backgroundColor withDuration:0.25];
         
         //retun default background color after 1 sec
         if (self.timer.isValid) { [self.timer invalidate]; }
@@ -192,6 +187,10 @@
     
     //close VC
     [self dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)resetBackgroundColor {
+    [self.view changeBackgroundColor:UIColor.whiteColor withDuration:0.25];
 }
 
 @end

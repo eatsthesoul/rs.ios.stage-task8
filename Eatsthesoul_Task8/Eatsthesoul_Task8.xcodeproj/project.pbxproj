@@ -28,6 +28,7 @@
 		4F61E1E226A1F6BE00B10B94 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61E1E126A1F6BE00B10B94 /* CanvasView.m */; };
 		4FB2B55B26A5E86E00C7678B /* CanvasView+Head.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2B55A26A5E86E00C7678B /* CanvasView+Head.m */; };
 		4FD51A6326A6F29800D89C46 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD51A6226A6F29800D89C46 /* NSMutableArray+Shuffle.m */; };
+		4FD51A6C26A6F63000D89C46 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD51A6B26A6F63000D89C46 /* UIView+Animation.m */; };
 		4FFDD7D926A5FCBD00A2E560 /* CanvasView+Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDD7D826A5FCBD00A2E560 /* CanvasView+Planet.m */; };
 		4FFDD7DD26A5FD0900A2E560 /* CanvasView+Landscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDD7DC26A5FD0900A2E560 /* CanvasView+Landscape.m */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,8 @@
 		4FB2B55A26A5E86E00C7678B /* CanvasView+Head.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasView+Head.m"; sourceTree = "<group>"; };
 		4FD51A6126A6F29800D89C46 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		4FD51A6226A6F29800D89C46 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		4FD51A6A26A6F63000D89C46 /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		4FD51A6B26A6F63000D89C46 /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		4FFDD7D726A5FCBD00A2E560 /* CanvasView+Planet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanvasView+Planet.h"; sourceTree = "<group>"; };
 		4FFDD7D826A5FCBD00A2E560 /* CanvasView+Planet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasView+Planet.m"; sourceTree = "<group>"; };
 		4FFDD7DB26A5FD0900A2E560 /* CanvasView+Landscape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanvasView+Landscape.h"; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 				4F61E1CF26A1E9D700B10B94 /* UIColor+HexColor */,
 				4F61E1DE26A1F42F00B10B94 /* UIFont+AppFont */,
 				4FD51A6526A6F2AD00D89C46 /* NSMutableArray+Shuffle */,
+				4FD51A6D26A6F63900D89C46 /* UIView+Animation */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -287,6 +291,15 @@
 				4FD51A6226A6F29800D89C46 /* NSMutableArray+Shuffle.m */,
 			);
 			path = "NSMutableArray+Shuffle";
+			sourceTree = "<group>";
+		};
+		4FD51A6D26A6F63900D89C46 /* UIView+Animation */ = {
+			isa = PBXGroup;
+			children = (
+				4FD51A6A26A6F63000D89C46 /* UIView+Animation.h */,
+				4FD51A6B26A6F63000D89C46 /* UIView+Animation.m */,
+			);
+			path = "UIView+Animation";
 			sourceTree = "<group>";
 		};
 		4FFDD7D026A5FAF100A2E560 /* CanvasView+Drawing */ = {
@@ -412,6 +425,7 @@
 				4F1A4A0126A5AF23008804D2 /* CanvasView+Tree.m in Sources */,
 				4F61E1C826A1D82800B10B94 /* ArtistVC.m in Sources */,
 				4F0A7D2A26A3542A00A09097 /* CustomPresentationController.m in Sources */,
+				4FD51A6C26A6F63000D89C46 /* UIView+Animation.m in Sources */,
 				4F61E1DD26A1F22500B10B94 /* UIFont+AppFont.m in Sources */,
 				4F1A49ED26A36D52008804D2 /* ColorButton.m in Sources */,
 				4F61E1CE26A1E9C000B10B94 /* UIColor+HexColor.m in Sources */,
