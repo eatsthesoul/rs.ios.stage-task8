@@ -17,6 +17,7 @@
 #import "CanvasView+Tree.h"
 #import "CanvasView+Head.h"
 #import "CanvasView+Planet.h"
+#import "NSMutableArray+Shuffle.h"
 
 @class TimerVC;
 
@@ -153,6 +154,7 @@
     while (colors.count < 3) {
         [colors addObject:UIColor.blackColor];
     }
+    [colors shuffle];
     return [colors copy];
 }
 
