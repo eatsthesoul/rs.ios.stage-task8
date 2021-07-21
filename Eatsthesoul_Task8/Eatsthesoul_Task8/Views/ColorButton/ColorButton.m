@@ -52,8 +52,8 @@
         
         _defaultEnteredViewInsets = @[[_enteredView.heightAnchor constraintEqualToConstant:24],
                                       [_enteredView.widthAnchor constraintEqualToConstant:24]];
-        _pressedEnteredViewInsets = @[[_enteredView.heightAnchor constraintEqualToConstant:40],
-                                      [_enteredView.widthAnchor constraintEqualToConstant:40]];
+        _pressedEnteredViewInsets = @[[_enteredView.heightAnchor constraintEqualToConstant:36],
+                                      [_enteredView.widthAnchor constraintEqualToConstant:36]];
         
         [NSLayoutConstraint activateConstraints:@[
             [_enteredView.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
@@ -92,7 +92,7 @@
         [UIView animateWithDuration:0.09 animations:^{
             [NSLayoutConstraint deactivateConstraints:self.defaultEnteredViewInsets];
             [NSLayoutConstraint activateConstraints:self.pressedEnteredViewInsets];
-            self.enteredView.layer.cornerRadius = 9;
+            self.enteredView.layer.cornerRadius = 8;
             [self layoutIfNeeded];
         }];
     }
