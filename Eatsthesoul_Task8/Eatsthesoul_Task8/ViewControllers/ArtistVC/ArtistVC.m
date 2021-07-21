@@ -35,7 +35,7 @@
 @property (nonatomic, strong) TimerVC *timerVC;
 @property (nonatomic, strong) DrawingsVC *drawingsVC;
 
-@property(nonatomic, copy) NSTimer *redrawTimer;
+@property(nonatomic, strong) NSTimer *redrawTimer;
 
 @end
 
